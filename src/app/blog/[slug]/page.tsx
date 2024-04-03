@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { draftMode } from "next/headers";
 
-import MoreStories from "../../more-stories";
-import Avatar from "../../avatar";
-import Date from "../../date";
-import CoverImage from "../../cover-image";
+import MoreStories from "@/app/components/more-stories";
+import Avatar from "@/app/components/avatar";
+import Date from "@/app/components/date";
+import CoverImage from "@/app/components/cover-image";
 
-import { Markdown } from "@/lib/markdown";
+import { Markdown } from "@/app/components/lib/markdown";
 import { getAllPosts, getPostAndMorePosts } from "@/lib/api";
 
 export async function generateStaticParams() {
@@ -27,12 +27,6 @@ export default async function PostPage({
 
   return (
     <div className="container mx-auto px-5">
-      <h2 className="mb-20 mt-8 text-2xl font-bold leading-tight tracking-tight md:text-4xl md:tracking-tighter">
-        <Link href="/" className="hover:underline">
-          Blog
-        </Link>
-        .
-      </h2>
       <article>
         <h1 className="mb-12 text-center text-6xl font-bold leading-tight tracking-tighter md:text-left md:text-7xl md:leading-none lg:text-8xl">
           {post.title}
