@@ -3,8 +3,6 @@ import { draftMode } from "next/headers";
 
 import MoreStories from "@/app/components/more-stories";
 import PostAvatar from "@/app/components/lib/post-avatar";
-import Avatar from "@mui/material/Avatar";
-import Date from "@/app/components/date";
 import CoverImage from "@/app/components/cover-image";
 
 import { Markdown } from "@/app/components/lib/markdown";

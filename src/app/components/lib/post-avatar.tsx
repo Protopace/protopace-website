@@ -1,5 +1,5 @@
 import Avatar from "@mui/material/Avatar";
-import Date from "@/app/components/date";
+import Date from "@/app/components/lib/date";
 
 export default function PostAvatar({
   avatarAlt,

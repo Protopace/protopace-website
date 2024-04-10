@@ -1,38 +1,58 @@
 import Link from "next/link";
-import Avatar from "./avatar";
-import DateComponent from "./date";
-import CoverImage from "./cover-image";
+import Date from "@/app/components/lib/date";
+
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardActionArea from "@mui/material/CardActionArea";
+import CardMedia from "@mui/material/CardMedia";
 
 function PostPreview({
   title,
   coverImage,
   date,
-  excerpt,
   author,
   slug,
 }: {
   title: string;
   coverImage: any;
   date: string;
-  excerpt: string;
   author: any;
   slug: string;
 }) {
   return (
-    <div>
-      <div className="mb-5">
-        <CoverImage title={title} slug={slug} url={coverImage.url} />
-      </div>
-      <h3 className="text-3xl mb-3 leading-snug">
-        <Link href={`/blog/${slug}`} className="hover:underline">
-          {title}
-        </Link>
-      </h3>
-      <div className="text-lg mb-4">
-        <DateComponent dateString={date} />
-      </div>
-      <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-      {author && <Avatar name={author.name} picture={author.picture} />}
+
+    <div className="">
+      <Link href={`/blog/${slug}`}>
+        <Card sx={{ maxWidth: 480, height:470 }}>
+            <CardActionArea sx={{ maxWidth: 480, height:470 }}>
+              <CardMedia sx={{ width:480, height: 250}}
+                image={coverImage.url}
+                title={coverImage.alt}
+              />
+
+              <CardContent>
+              <h3 className="text-2xl font-medium mt-3 md:mt-5">
+                {title}
+              </h3>
+
+              <div className="hidden md:block b-0 mt-3">
+                <p className="font-medium">
+                  {"By " + author.name + " - "}
+                  <Date dateString={date}></Date>
+                </p>
+              </div>
+
+              <div className="md:hidden b-0 mt-2">
+                <p className="font-medium">
+                  <Date dateString={date}></Date>
+                </p>
+              </div>
+
+              </CardContent>
+            </CardActionArea>
+
+        </Card>
+      </Link>
     </div>
   );
 }
@@ -40,10 +60,10 @@ function PostPreview({
 export default function MoreStories({ morePosts }: { morePosts: any[] }) {
   return (
     <section>
-      <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
-        More Stories
+      <h2 className="mb-12 text-3xl md:text-5xl font-medium tracking-tighter text-center">
+        Related Stories
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">
+      <div className="mb-32 grid grid-cols-1 gap-y-12 md:grid-cols-2 md:gap-x-2 lg:grid-cols-3 lg:gap-x-6">
         {morePosts.map((post) => (
           <PostPreview
             key={post.slug}
@@ -52,7 +72,6 @@ export default function MoreStories({ morePosts }: { morePosts: any[] }) {
             date={post.date}
             author={post.author}
             slug={post.slug}
-            excerpt={post.excerpt}
           />
         ))}
       </div>

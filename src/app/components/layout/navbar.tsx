@@ -74,18 +74,18 @@ export default function NavBar() {
         <div className="hidden sm:flex">
           <ul className="flex flex-row items-center gap-x-6">
             <li>
-              <Button variant="text">
                 <Link href="/blog" className="font-bold">
-                  Blog
+                  <Button variant="text">
+                    Blog
+                  </Button>
                 </Link>
-              </Button>
             </li>
 
             <li>
-              <Button 
-                variant="contained"
-                color="primary">
-                <Link href="/">Subscribe</Link>
+              <Button variant="contained" color="primary">
+                <Link href="/">
+                  Subscribe
+                </Link>
               </Button>
             </li>
           </ul>
