@@ -2,7 +2,8 @@ import Link from "next/link";
 import { draftMode } from "next/headers";
 
 import MoreStories from "@/app/components/more-stories";
-import Avatar from "@/app/components/avatar";
+// import Avatar from "@/app/components/avatar";
+import Avatar from "@mui/material/Avatar";
 import Date from "@/app/components/date";
 import CoverImage from "@/app/components/cover-image";
 
@@ -28,35 +29,80 @@ export default async function PostPage({
   return (
     <div className="container mx-auto px-5">
       <article>
-        <h1 className="mb-12 text-center text-6xl font-bold leading-tight tracking-tighter md:text-left md:text-7xl md:leading-none lg:text-8xl">
-          {post.title}
-        </h1>
-        <div className="hidden md:mb-12 md:block">
-          {post.author && (
-            <Avatar name={post.author.name} picture={post.author.picture} />
-          )}
+        <div className="mx-auto max-w-4xl mt-10">
+          <h1 className="text-center text-4xl leading-tight tracking-tighter md:text-left md:text-5xl md:leading-none lg:text-6xl">
+            {post.title}
+          </h1>
         </div>
-        <div className="mb-8 sm:mx-0 md:mb-16">
-          <CoverImage title={post.title} url={post.coverImage.url} />
-        </div>
-        <div className="mx-auto max-w-2xl">
-          <div className="mb-6 block md:hidden">
-            {post.author && (
-              <Avatar name={post.author.name} picture={post.author.picture} />
-            )}
+
+        <div className="mx-auto max-w-4xl">
+
+          <div className="hidden mt-8 md:block md:max-w-4xl md:mx-auto">
+            <div className="flex items-center">
+
+              <div className="grid grid-cols-8 gap-x-4">
+
+                <div className="row-span-2 flex justify-center items-center">
+                  <Avatar alt={post.author.name} src={post.author.picture.url} />
+                </div>
+
+                <div className="col-span-7 text-md">
+                  {post.author.name}
+                </div>
+
+                <div className="col-span-7 text-md">
+                  <Date dateString={post.date} />
+                </div>
+
+              </div>
+
+
+
+            </div>
           </div>
-          <div className="mb-6 text-lg">
-            <Date dateString={post.date} />
+
+          <div className="my-8 sm:mx-0">
+            <CoverImage title={post.title} url={post.coverImage.url} />
           </div>
+
         </div>
 
         <div className="mx-auto max-w-2xl">
-          <div className="prose">
+          <div className="prose text-lg">
             <Markdown content={post.content} />
           </div>
+
+          <div className="mt-8 md:hidden md:block md:max-w-4xl md:mx-auto">
+            <div className="flex items-center">
+
+              <div className="grid grid-cols-8 gap-x-4">
+
+                <div className="row-span-2 flex justify-center items-center">
+                  <Avatar alt={post.author.name} src={post.author.picture.url} />
+                </div>
+
+                <div className="col-span-7 text-md">
+                  {post.author.name}
+                </div>
+
+                <div className="col-span-7 text-md">
+                  <Date dateString={post.date} />
+                </div>
+
+              </div>
+
+
+
+            </div>
+          </div>
+
         </div>
+
+
+        
+        
       </article>
-      <hr className="border-accent-2 mt-28 mb-24" />
+      <hr className="border-accent-2 mt-12 mb-24" />
       <MoreStories morePosts={morePosts} />
     </div>
   );

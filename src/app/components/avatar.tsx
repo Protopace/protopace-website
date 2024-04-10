@@ -13,8 +13,8 @@ export default function Avatar({
         <ContentfulImage
           alt={name}
           className="object-cover h-full rounded-full"
-          height={48}
-          width={48}
+          height={40}
+          width={40}
           src={picture.url}
         />
       </div>
