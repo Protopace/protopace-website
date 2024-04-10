@@ -2,7 +2,7 @@ import Link from "next/link";
 import { draftMode } from "next/headers";
 
 import MoreStories from "@/app/components/more-stories";
-// import Avatar from "@/app/components/avatar";
+import PostAvatar from "@/app/components/lib/post-avatar";
 import Avatar from "@mui/material/Avatar";
 import Date from "@/app/components/date";
 import CoverImage from "@/app/components/cover-image";
@@ -39,25 +39,12 @@ export default async function PostPage({
 
           <div className="hidden mt-8 md:block md:max-w-4xl md:mx-auto">
             <div className="flex items-center">
-
-              <div className="grid grid-cols-8 gap-x-4">
-
-                <div className="row-span-2 flex justify-center items-center">
-                  <Avatar alt={post.author.name} src={post.author.picture.url} />
-                </div>
-
-                <div className="col-span-7 text-md">
-                  {post.author.name}
-                </div>
-
-                <div className="col-span-7 text-md">
-                  <Date dateString={post.date} />
-                </div>
-
-              </div>
-
-
-
+              <PostAvatar
+                avatarAlt={post.author.name}
+                avatarSrc={post.author.picture.url}
+                authorName={post.author.name}
+                postDate={post.date}>
+              </PostAvatar>
             </div>
           </div>
 
@@ -74,32 +61,15 @@ export default async function PostPage({
 
           <div className="mt-8 md:hidden md:block md:max-w-4xl md:mx-auto">
             <div className="flex items-center">
-
-              <div className="grid grid-cols-8 gap-x-4">
-
-                <div className="row-span-2 flex justify-center items-center">
-                  <Avatar alt={post.author.name} src={post.author.picture.url} />
-                </div>
-
-                <div className="col-span-7 text-md">
-                  {post.author.name}
-                </div>
-
-                <div className="col-span-7 text-md">
-                  <Date dateString={post.date} />
-                </div>
-
-              </div>
-
-
-
+              <PostAvatar
+                  avatarAlt={post.author.name}
+                  avatarSrc={post.author.picture.url}
+                  authorName={post.author.name}
+                  postDate={post.date}>
+                </PostAvatar>
             </div>
           </div>
-
         </div>
-
-
-        
         
       </article>
       <hr className="border-accent-2 mt-12 mb-24" />
