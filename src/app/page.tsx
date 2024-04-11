@@ -1,59 +1,41 @@
 import Link from "next/link";
-import { draftMode } from "next/headers";
+import Button from "@mui/material/Button";
+import ContentfulImage from "@/app/components/lib/contentful-image";
 
-import Date from "./components/lib/date";
-import CoverImage from "./components/cover-image";
-import Avatar from "./components/lib/avatar";
-import MoreStories from "./components/more-stories";
+import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
 
-import { getAllPosts } from "@/lib/api";
-
-function Intro() {
+function Hero() {
   return (
-    <section className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-      <h1 className="text-6xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
-        Blog.
-      </h1>
-    </section>
-  );
-}
-
-function HeroPost({
-  title,
-  coverImage,
-  date,
-  excerpt,
-  author,
-  slug,
-}: {
-  title: string;
-  coverImage: any;
-  date: string;
-  excerpt: string;
-  author: any;
-  slug: string;
-}) {
-  return (
-    <section>
-      <div className="mb-8 md:mb-16">
-        <CoverImage title={title} slug={slug} url={coverImage.url} />
-      </div>
-      <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
-        <div>
-          <h3 className="mb-4 text-4xl lg:text-6xl leading-tight">
-            <Link href={`/posts/${slug}`} className="hover:underline">
-              {title}
-            </Link>
-          </h3>
-          <div className="mb-4 md:mb-0 text-lg">
-            <Date dateString={date} />
-          </div>
+    <section className="center-contents">
+        <div className="grid max-w-screen-xl px-4 py-8 mx-auto text-center lg:text-left lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+            <div className="mr-auto place-self-center lg:col-span-7">
+              <h1 className="max-w-2xl my-4 text-4xl font-medium tracking-tight leading-none md:text-5xl xl:text-6xl">
+                The last marketing and sales agency you will need
+              </h1>
+              <p className="max-w-2xl my-8 font-regular lg:mb-8 md:text-lg lg:text-xl">
+                From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack.
+              </p>
+              <div className="mt-12">
+                <Link href="/blog">
+                  <Button variant="outlined" size="large">
+                    <p className="font-bold text-xl capitalize py-1">
+                      Contact Us
+                    </p>
+                    <ArrowForwardOutlinedIcon fontSize="medium" className="ml-4"/>
+                  </Button>
+                </Link>
+              </div>
+            </div>
+            <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
+              <ContentfulImage
+                alt={`Cover Image for`}
+                priority
+                width={2000}
+                height={1000}
+                src="https://images.ctfassets.net/cnurwx923vw4/4d9AqONKDZyORrSB9TYeVX/5c84c0f322b501880803e7c4b789ee08/Hero.webp"
+              />
+            </div>                
         </div>
-        <div>
-          <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-          {author && <Avatar name={author.name} picture={author.picture} />}
-        </div>
-      </div>
     </section>
   );
 }
@@ -61,6 +43,6 @@ function HeroPost({
 export default async function Page() {
 
   return (
-    <h1>Home test deployment</h1>
+    <Hero></Hero>
   );
 }

@@ -29,25 +29,23 @@ function PostPreview({
                 image={coverImage.url}
                 title={coverImage.alt}
               />
-
               <CardContent>
               <h3 className="text-2xl font-medium mt-3 md:mt-5">
                 {title}
               </h3>
-
               <div className="hidden md:block b-0 mt-3">
                 <p className="font-medium">
                   {"By " + author.name + " - "}
                   <Date dateString={date}></Date>
+                  
                 </p>
               </div>
-
               <div className="md:hidden b-0 mt-2">
                 <p className="font-medium">
                   <Date dateString={date}></Date>
                 </p>
               </div>
-
+             
               </CardContent>
             </CardActionArea>
 

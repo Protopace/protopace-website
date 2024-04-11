@@ -2,7 +2,8 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import ContentfulImage from "@/app/components/lib/contentful-image";
-import Button from "@mui/material/Button"
+import Button from "@mui/material/Button";
+import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
 
 function HamburguerMenu({ menuOpen }: { menuOpen: boolean }) {
   return (
@@ -55,7 +56,7 @@ export default function NavBar() {
 
   return (
     <nav
-      className={`fixed w-full h-16 border-b-2 bg-white top-0 ${
+      className={`fixed w-full h-16 md:h-20 border-b-2 bg-white top-0 ${
         isScrolled ? "z-50" : ""
       }`}
     >
@@ -63,10 +64,10 @@ export default function NavBar() {
         <span onClick={() => setMenuOpen(false)}>
           <Link href="/">
             <ContentfulImage
-              src="https://images.ctfassets.net/cnurwx923vw4/23GMvE9UfiF42IDtSiuhL5/f35203b3b0080166c2834a947e44b1e8/Logo.svg"
+              src="https://images.ctfassets.net/cnurwx923vw4/6NjpkxInHsigcB9Fyc8esk/9f71b6facea35558d7e72e3a5115659c/logo.png"
               alt="Protopace's logo"
-              width={90}
-              height={46}
+              width={110}
+              height={57}
             />
           </Link>
         </span>
@@ -74,19 +75,24 @@ export default function NavBar() {
         <div className="hidden sm:flex">
           <ul className="flex flex-row items-center gap-x-6">
             <li>
-                <Link href="/blog" className="font-bold">
-                  <Button variant="text">
-                    Blog
+                <Link href="/blog">
+                  <Button variant="text" color="primary">
+                    <p className="font-regular capitalize">
+                      Blog
+                    </p>
                   </Button>
                 </Link>
             </li>
 
             <li>
-              <Button variant="contained" color="primary">
-                <Link href="/">
-                  Subscribe
+                <Link href="/blog">
+                  <Button variant="outlined" color="primary">
+                    <p className="font-bold capitalize">
+                      Contact Us
+                    </p>
+                    <ArrowForwardOutlinedIcon fontSize="small" className="ml-2"/>
+                  </Button>
                 </Link>
-              </Button>
             </li>
           </ul>
         </div>

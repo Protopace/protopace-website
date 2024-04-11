@@ -10,9 +10,12 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-quicksand)"],
-        display: ["var(--font-gordita)"],
+        sans: ["var(--font-quicksand)"]
       },
+      colors: {
+        'primary': '#001D66',
+        'secondary': '#0070E0',
+      }
     },
   },
   future: {
