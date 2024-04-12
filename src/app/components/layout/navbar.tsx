@@ -56,8 +56,8 @@ export default function NavBar() {
 
   return (
     <nav
-      className={`fixed w-full h-16 md:h-20 border-b-2 bg-white top-0 ${
-        isScrolled ? "z-50" : ""
+      className={`fixed w-full h-16 md:h-20 bg-gray-50 top-0 ${
+        isScrolled ? "z-50 border-b-2" : ""
       }`}
     >
       <div className="flex justify-between items-center h-full w-full container mx-auto px-5">
@@ -85,7 +85,7 @@ export default function NavBar() {
             </li>
 
             <li>
-                <Link href="/blog">
+                <Link href="/contact-us">
                   <Button variant="outlined" color="primary">
                     <p className="font-bold capitalize">
                       Contact Us

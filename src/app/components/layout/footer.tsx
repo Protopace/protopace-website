@@ -13,14 +13,14 @@ export default function Footer() {
         <div className="mx-auto max-w-screen-xl">
             <div className="md:flex md:justify-between">
                 <div className="mb-6 md:mb-0">
-									<Link href="/">
-										<ContentfulImage
-											src="https://images.ctfassets.net/cnurwx923vw4/6NjpkxInHsigcB9Fyc8esk/9f71b6facea35558d7e72e3a5115659c/logo.png"
-											alt="Protopace's logo"
-											width={220}
-											height={57}
-										/>
-									</Link>
+                    <Link href="/">
+                        <ContentfulImage
+                            src="https://images.ctfassets.net/cnurwx923vw4/6NjpkxInHsigcB9Fyc8esk/9f71b6facea35558d7e72e3a5115659c/logo.png"
+                            alt="Protopace's logo"
+                            width={220}
+                            height={57}
+                        />
+                    </Link>
                 </div>
                 <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                     <div>
@@ -65,15 +65,15 @@ export default function Footer() {
                 <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
                     <Link href="https://www.facebook.com/protopace/" className="text-gray-500 hover:text-secondary">
                         <FacebookIcon>
-												</FacebookIcon>
-										</Link>
+						</FacebookIcon>
+					</Link>
                     <Link href="https://www.instagram.com/protopace/" className="text-gray-500 hover:text-secondary">
                         <InstagramIcon>
-												</InstagramIcon>
+						</InstagramIcon>
                     </Link>
                     <Link href="https://www.x.com/protopace/" className="text-gray-500 hover:text-secondary">
                         <XIcon>
-												</XIcon>
+						</XIcon>
                     </Link>
                 </div>
             </div>
