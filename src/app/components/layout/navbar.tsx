@@ -32,23 +32,26 @@ function HamburguerMenu({ menuOpen }: { menuOpen: boolean }) {
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(true);
 
   const toggleNavbar = () => {
     setMenuOpen(!menuOpen);
   };
 
   useEffect(() => {
+
+    let prevScrollY=window.scrollY;
+
     const handleScroll = () => {
-      if (window.scrollY > 0) {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY < prevScrollY) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
+      prevScrollY = currentScrollY;
     };
-
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -56,8 +59,8 @@ export default function NavBar() {
 
   return (
     <nav
-      className={`fixed w-full h-16 md:h-20 bg-gray-50 top-0 ${
-        isScrolled ? "z-50 border-b-2" : ""
+      className={`fixed w-full h-16 border-b-2 md:h-20 bg-gray-50 transition-all duration-200 ${
+        isScrolled ? "fixed z-50 top-0" : "top-[-100%]"
       }`}
     >
       <div className="flex justify-between items-center h-full w-full container mx-auto px-5">
