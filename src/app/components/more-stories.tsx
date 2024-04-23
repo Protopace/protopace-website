@@ -58,9 +58,6 @@ function PostPreview({
 export default function MoreStories({ morePosts }: { morePosts: any[] }) {
   return (
     <section>
-      <h2 className="mb-12 text-3xl md:text-5xl font-medium tracking-tighter text-center">
-        Related Stories
-      </h2>
       <div className="mb-32 grid grid-cols-1 gap-y-12 md:grid-cols-2 md:gap-x-2 lg:grid-cols-3 lg:gap-x-6">
         {morePosts.map((post) => (
           <PostPreview

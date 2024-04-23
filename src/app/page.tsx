@@ -9,10 +9,10 @@ function Hero() {
         <div className="grid max-w-screen-xl px-4 py-10 mx-auto text-center lg:text-left lg:gap-8 xl:gap-0 lg:py-24 lg:grid-cols-12">
             <div className="mr-auto place-self-center lg:col-span-7">
               <h1 className="max-w-2xl text-primary my-4 text-4xl font-medium tracking-tight leading-none md:text-5xl xl:text-6xl">
-                The last marketing and sales agency you will need
+                The newsletter to improve your sales game.
               </h1>
               <p className="max-w-2xl my-8 font-regular lg:mb-8 md:text-lg lg:text-xl">
-                Our mission is to facilitate the emergence of great services and make the world a better place by providing the tools needed to market and sell them from scratch to a global scale.
+                Our mission is to facilitate the emergence of great products by providing the knowledge needed to scale their revenue from startup to global enterprise.
               </p>
               <div className="mt-12">
                 <Link href="/contact-us">
@@ -45,10 +45,10 @@ function Features() {
       <div className="px-4 mx-auto max-w-screen-xl sm:py-20 lg:px-6">
         <div className="hidden md:block max-w-screen-md mb-8 lg:mb-16">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-white">
-            Grow your small or medium business
+            Learn how to grow your business for free
           </h2>
           <p className="text-gray-400 hidden md:block sm:text-xl">
-            We believe that in order to scale any business, we need to have a cohesive system that generates leads and consistently closes them. That's why we focus on three areas to drive revenue.
+            We believe that in order to scale any business, we need to have a cohesive system that generates deals and consistently closes them. That's why we focus on three areas to drive revenue.
           </p>
         </div>
           <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
@@ -59,10 +59,10 @@ function Features() {
                   </h3>
                 </div>
                 <h3 className="mb-2 text-xl font-bold text-white">
-                  Search Engine Marketing<br />&#40;SEO, SEM &#38; PPC&#41;
+                  Business Development & Value Selling
                 </h3>
                 <p className="text-gray-400">
-                  We'll first aim to drive qualified traffic to your site, attracting potential buyers and nurturing those not yet ready to purchase.
+                  Build a strong sales playbook, from lead generation to closing and everything in between.
                 </p>
             </div>
               <div>
@@ -72,10 +72,10 @@ function Features() {
                     </h3>
                   </div>
                   <h3 className="mb-2 text-xl font-bold text-white">
-                    Conversion Rate Optimization<br />&#40;CRO&#41;
+                    Sales Operations & Enablement
                   </h3>
                   <p className="text-gray-400">
-                  Secondly, we review your website to increase the percentage of visitors who convert into leads, and thus achieve more sales.
+                    Create strong training and data processes to find blindspots and improve them.
                   </p>
               </div>
               <div>
@@ -85,10 +85,10 @@ function Features() {
                     </h3>
                   </div>
                   <h3 className="mb-2 text-xl font-bold text-white">
-                    Consultative Sales Discipline<br />&#40;Qualifying, Closing &#38; Management &#41;
+                    Sales Management & Strategy
                   </h3>
                   <p className="text-gray-400">
-                    Thirdly, we'll provide the playbook and guide you developing a consistent sales process to drive predictable revenue.
+                    Create, update, report and keep track of your your go-to-market strategy.
                   </p>
               </div>
           </div>
@@ -111,10 +111,10 @@ function Impact() {
           </div>
           <div className="mt-4 md:mt-0">
               <h2 className="mb-4 text-4xl font-extrabold text-secondary">
-                An agency obsessed about your Return on Investment
+                The playbook for your playbook.
               </h2>
               <p className="mb-6 md:text-lg">
-                At Protopace, we're not just another marketing agency; we're your strategic partner dedicated to maximizing your return on investment (ROI). With a relentless focus on delivering tangible results, we combine creativity, data-driven insights, and cutting-edge strategies to elevate your brand and drive sustainable growth.
+                Although creating a product and getting product-market fit is a challenge, one of the hardest parts for startups and companies in general to figure out, is distribution. So tough in fact that great companies many times die because of this reason. <br />We will change that.
               </p>
                 <Link href="/contact-us">
                   <Button variant="outlined" color="secondary" size="large">
