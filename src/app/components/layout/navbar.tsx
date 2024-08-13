@@ -44,11 +44,12 @@ export default function NavBar() {
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      if (currentScrollY < prevScrollY) {
+      if (currentScrollY < prevScrollY || currentScrollY <=30) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
+      console.log(currentScrollY)
       prevScrollY = currentScrollY;
     };
     window.addEventListener("scroll", handleScroll);
