@@ -9,10 +9,10 @@ function Hero() {
         <div className="grid flex justify-center max-w-screen-xl px-4 py-10 mx-auto text-center lg:text-left lg:gap-8 xl:gap-0 lg:py-24 lg:grid-cols-12">
             <div className="mx-auto place-self-center lg:col-span-7">
               <h1 className="max-w-2xl text-primary my-4 text-4xl font-medium tracking-tight leading-none md:text-5xl xl:text-6xl">
-                Maximize bookings and rent without the hassle.
+                Focus on your job, we will handle the housing.
               </h1>
               <p className="max-w-2xl my-8 font-regular lg:mb-8 md:text-lg lg:text-xl">
-                Enjoy long-term rental income without worrying about tenants. We provide full-service management to keep your property in pristine condition, as if it were our own.
+                We offer flexible stays in fully furnished, professionally managed properties, with in-unit laundry, a fully equipped kitchen, WiFi, and all-inclusive pricing—so your employees can focus on what really matters.
               </p>
               <div className="mt-12">
                 <Link href="/contact-us">
@@ -45,10 +45,10 @@ function Features() {
       <div className="px-4 mx-auto max-w-screen-xl sm:py-20 lg:px-6">
         <div className="md:block max-w-screen-md mb-8 lg:mb-16">
           <h2 className="text-center mb-4 text-4xl tracking-tight font-extrabold text-primary md:text-left">
-            Our value proposal to you
+            Our value proposal to your company
           </h2>
           <p className="hidden md:block sm:text-xl">
-          We offer full-service vacation rental property management for busy owners. We believe that partnering with property owners is the key to delivering a premium guest experience.
+            Protopace streamlines your Business Travel Accommodation Program, offering a hassle-free experience for travelers while saving your company money with our cost-effective solutions.
           </p>
         </div>
           <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
@@ -59,10 +59,10 @@ function Features() {
                   </h3>
                 </div>
                 <h3 className="mb-2 text-xl font-bold text-primary">
-                  Property care and respect.
+                  Frictionless and cost efficient.
                 </h3>
                 <p className="">
-                  First and foremost, the properties we care for are the foundation of everything we do.
+                  We make your company more cost-effective by helping you save on lodging expenses.
                 </p>
             </div>
               <div>
@@ -72,10 +72,10 @@ function Features() {
                     </h3>
                   </div>
                   <h3 className="mb-2 text-xl font-bold text-primary">
-                    Timely payouts and service.
+                    Personalized expert support.
                   </h3>
                   <p className="">
-                    We’ll be a dependable partner you can count on, both for your finances and exceptional service.
+                    A dedicated expert to handle logistics for all your professional travel needs.
                   </p>
               </div>
               <div>
@@ -99,22 +99,22 @@ function Features() {
 
 function ImpactRight() {
   return (
-    <section className="bg-gray-50">
+    <section className="bg-gray-200">
       <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
         <div className="flex justify-center mx-auto max-w-32 md:max-w-none">
           <ContentfulImage
-            src="https://images.ctfassets.net/cnurwx923vw4/4mQYuEKrwh7ml9ZrtBCWSQ/b06d5e596d8c0757226d367f75d18022/Coffee_3D_Icon_Set.svg"
-            alt="Protopace's logo"
+            src="https://images.ctfassets.net/cnurwx923vw4/782KaqekJz0p0SMJUB6IRA/e3bd779438c258650bea8c46eb72700e/World_Spinning.svg"
+            alt="Globe Spinning"
             width={400}
             height={400}
           />
         </div>
       <div className="mt-4 md:mt-0">
         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-secondary">
-          Your property is in great hands
+          Business Travel Simplified
         </h2>
         <p className="mb-6 md:text-lg">
-          We are the ideal tenants, creating a proactive experience te keep your property in great shape, this includes preventive maintenance alerts, proactive handyman services, professional cleaning, among others.
+          Let our experts handle the accommodations for your global workforce. We’ll provide not only the lodging but also the support each guest may need, ensuring your business never skips a beat.
         </p>
         <Link className="flex justify-center mx-auto " href="/contact-us">
           <Button variant="outlined" color="secondary" size="large">
@@ -136,11 +136,10 @@ function ImpactLeft() {
       <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
       <div className="mt-4 md:mt-0">
         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-primary">
-          Get paid on time, every time
+          Budget Control and Visibility
         </h2>
         <p className="mb-6 md:text-lg">
-          Stop struggling with late or incomplete payments. Our staff ensures you receive your money on time and supports you with any inquiries about your property.
-        </p>
+          Create custom budgetary policies for all aspects of your corporate travel, allowing you to analyze a clear picture of your return on investment.        </p>
         <Link className="flex justify-center mx-auto " href="/contact-us">
           <Button variant="outlined" color="primary" size="large">
             <p className="font-bold text-xl capitalize py-1">
