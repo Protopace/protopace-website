@@ -79,6 +79,16 @@ export default function NavBar() {
         <div className="hidden sm:flex">
           <ul className="flex flex-row items-center gap-x-6">
             <li>
+                <Link href="/property-owners">
+                  <Button variant="text" color="primary">
+                    <p className="font-regular capitalize">
+                      Property Owners
+                    </p>
+                  </Button>
+                </Link>
+            </li>
+
+            <li>
                 <Link href="/blog">
                   <Button variant="text" color="primary">
                     <p className="font-regular capitalize">
@@ -115,6 +125,16 @@ export default function NavBar() {
           <ul className="flex flex-col">
             <li
               className="flex border-y-2 h-24"
+              onClick={() => setMenuOpen(false)}
+            >
+              <Link
+                href="/property-owners"
+                className="flex container mx-auto px-5 items-center w-full h-full text-[hsl(var(--primary))]">
+                Property Owners
+              </Link>
+            </li>
+            <li
+              className="flex border-b-2 h-24"
               onClick={() => setMenuOpen(false)}
             >
               <Link
