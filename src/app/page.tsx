@@ -9,7 +9,7 @@ function Hero() {
         <div className="grid flex justify-center max-w-screen-xl px-4 py-10 mx-auto text-center lg:text-left lg:gap-8 xl:gap-0 lg:py-24 lg:grid-cols-12">
             <div className="mx-auto place-self-center lg:col-span-7">
               <h1 className="max-w-2xl text-primary my-4 text-4xl font-medium tracking-tight leading-none md:text-5xl xl:text-6xl">
-                Focus on your job, we will handle the housing.
+                Focus on the job, we will handle the housing.
               </h1>
               <p className="max-w-2xl my-8 font-regular lg:mb-8 md:text-lg lg:text-xl">
                 We offer flexible stays in fully furnished, professionally managed properties, with in-unit laundry, a fully equipped kitchen, WiFi, and all-inclusive pricing—so your employees can focus on what really matters.
