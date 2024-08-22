@@ -19,8 +19,9 @@ function PostPreview({
   author: any;
   slug: string;
 }) {
-  return (
 
+  return (
+    
     <div className="">
       <Link href={`/blog/${slug}`}>
         <Card sx={{ maxWidth: 480, height:470 }}>
